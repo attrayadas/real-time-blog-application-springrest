@@ -1,14 +1,13 @@
 package com.attraya.blog.service;
 
 import com.attraya.blog.payload.PostDto;
-
-import java.util.List;
+import com.attraya.blog.payload.PostResponse;
 
 public interface PostService {
 
     PostDto createPost(PostDto postDto);
 
-    List<PostDto> getAllPosts();
+    PostResponse getAllPosts(int pageNo, int pageSize, String sortBy, String sortDir);
 
     PostDto getPostById(long id);
 
